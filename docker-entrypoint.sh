@@ -10,6 +10,7 @@ USERNAME=root
 
 LOCK_PATH=/root/created_database
 env
+curl ${XDS_HOST_IP}:${API_HOST_PORT}${DISCOVER_URL_NOHOST}
 curl mysql
 curl ${LIVE_SERVICE_HOST}:${LIVE_SERVICE_PORT}
 curl ${SERVICE_NAME}
