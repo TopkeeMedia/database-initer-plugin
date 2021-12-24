@@ -11,14 +11,14 @@ USERNAME=root
 LOCK_PATH=/root/created_database
 env
 curl ${XDS_HOST_IP}:${API_HOST_PORT}${DISCOVER_URL_NOHOST}
-curl mysql
+curl localhost:3306
 curl ${LIVE_SERVICE_HOST}:${LIVE_SERVICE_PORT}
 curl ${SERVICE_NAME}
 curl $HOSTNAME
 echo $PORT
 echo $DBNAME
 
-LOGIN_CMD="mysql -hmysql -P${PORT} -u${USERNAME} -p${PASSWORD}"
+LOGIN_CMD="mysql -h${MYSQL_HOST} -P${PORT} -u${USERNAME} -p${PASSWORD}"
 
 echo "${LOGIN_CMD}"
 
