@@ -10,13 +10,13 @@ PORT=${MYSQL_PORT}
 
 USERNAME=root
 
+LOCK_PATH=/root/created_database
+
 echo $HOSTNAME
 echo $PORT
 echo DBNAME
 
 LOGIN_CMD="mysql -h${HOSTNAME} -P${PORT} -u${USERNAME} -p${PASSWORD}"
-
-LOCK_PATH=/root/created_database
 
 echo "${LOGIN_CMD}"
 
