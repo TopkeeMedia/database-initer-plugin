@@ -12,8 +12,7 @@ PORT=${MYSQL_PORT}
 
 USERNAME=root
 
-curl ${HOSTNAME}:${PORT}
-
+echo $HOSTNAME
 echo $PORT
 echo DBNAME
 
