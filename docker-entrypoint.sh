@@ -2,8 +2,6 @@
 
 set -x
 
-exec /bin/bash
-
 DBNAME=${MYSQL_DATABASE}
 
 HOSTNAME=${MYSQL_HOST}
@@ -13,6 +11,11 @@ PASSWORD=${MYSQL_ROOT_PASSWORD}
 PORT=${MYSQL_PORT}
 
 USERNAME=root
+
+curl ${HOSTNAME}:${PORT}
+
+echo $PORT
+echo DBNAME
 
 LOGIN_CMD="mysql -h${HOSTNAME} -P${PORT} -u${USERNAME} -p${PASSWORD}"
 
