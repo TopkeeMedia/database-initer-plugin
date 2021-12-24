@@ -10,14 +10,14 @@ USERNAME=root
 
 LOCK_PATH=/root/created_database
 
-curl ${HOSTNAME}
+curl mysql
 curl ${LIVE_SERVICE_HOST}:${LIVE_SERVICE_PORT}
 curl ${SERVICE_NAME}
 echo $HOSTNAME
 echo $PORT
 echo $DBNAME
 
-LOGIN_CMD="mysql -h${HOSTNAME} -P${PORT} -u${USERNAME} -p${PASSWORD}"
+LOGIN_CMD="mysql -hmysql -P${PORT} -u${USERNAME} -p${PASSWORD}"
 
 echo "${LOGIN_CMD}"
 
