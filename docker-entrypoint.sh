@@ -13,7 +13,7 @@ env
 curl mysql
 curl ${LIVE_SERVICE_HOST}:${LIVE_SERVICE_PORT}
 curl ${SERVICE_NAME}
-echo $HOSTNAME
+curl $HOSTNAME
 echo $PORT
 echo $DBNAME
 
