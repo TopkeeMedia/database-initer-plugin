@@ -1,5 +1,9 @@
 #!/bin/bash
 
+set -x
+
+exec /bin/bash
+
 DBNAME=${MYSQL_DATABASE}
 
 HOSTNAME=${MYSQL_HOST}
